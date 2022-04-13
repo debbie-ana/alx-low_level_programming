@@ -10,14 +10,12 @@
 int main(void)
 {
 	int n = 0;
-	int a = 0;
-	int b = 1;
-	int num;
+	long int a = 0, b = 1, num;
 
 	while (n < 50)
 	{
 		num = a + b;
-		printf("%d", num);
+		printf("%lu", num);
 		a = b;
 		b = num;
 		if (n < 49)
