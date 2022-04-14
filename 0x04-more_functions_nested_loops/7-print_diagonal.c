@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_diagonal - print diagonal line using \
+ * print_diagonal - print diagonal line using backslashes
  * @n: number of backslashes to form the diagonal
  *
  * Return: void
