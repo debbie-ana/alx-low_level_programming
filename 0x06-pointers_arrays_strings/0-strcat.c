@@ -11,27 +11,12 @@
 char *_strcat(char *dest, char *src)
 {
 	int i;
-	int n = _strlen(dest);
+	int n = 0;
 
+	while (*(dest + n) != '\0')
+		n++;
 	for (i = 0; src[i] != '\0'; i++)
 		dest[n + i] = src[i];
 	dest[n + i] = '\0';
 	return (dest);
-}
-
-
-/**
- * _strlen - get length of a string
- * @s: string to get length
- *
- * Return: length of string
- */
-
-char *_strlen(char *s)
-{
-	int len = 0;
-
-	while (*(s + len) != '\0')
-		len++;
-	return (len);
 }
