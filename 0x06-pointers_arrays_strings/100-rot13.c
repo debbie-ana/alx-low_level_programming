@@ -8,8 +8,8 @@
 char *rot13(char *s)
 {
 	char *r = s;
-	char a[] = "abcdefghijklmnopqrstuvwxyz";
-	char b[] = "nopqrstuvwxyzabcdefghijklm";
+	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	int i = 0;
 
 	while (*s)
@@ -19,11 +19,6 @@ char *rot13(char *s)
 			if (*s == a[i])
 			{
 				*s = b[i];
-				break;
-			}
-			if (*s == a[i] - 32)
-			{
-				*s = b[i] - 32;
 				break;
 			}
 		}
