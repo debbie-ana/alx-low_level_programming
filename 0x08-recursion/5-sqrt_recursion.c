@@ -1,26 +1,21 @@
 /**
  * isqrt - checks for the square root of a number
- * @start: number to start with to check
- * @end:  number to end with to check
- * @n: number whose square root is to be gotten
+ * @a: number to start with to check
+ * @b: number whose square root is to be gotten
  *
  * Return: square root if square root is natural number, -1 otherwise
  */
-int isqrt(int start, int end, int n)
+int isqrt(int a, int b)
 {
-	int mid;
-
-	if (end >= start)
+	if (a * a == b)
 	{
-		mid = start + (end - start) / 2;
-		if (mid * mid == n)
-			return (mid);
-		if (mid * mid > n)
-			return (isqrt(start, mid - 1, n));
-		if (mid * mid < n)
-			return (isqrt(mid + 1, end, n));
+		return (b);
 	}
-	return (-1);
+	else if (a * a > b)
+	{
+		return (-1);
+	}
+	return (isqrt(a + 1, b));
 }
 
 /**
@@ -36,5 +31,5 @@ int _sqrt_recursion(int n)
 		return (-1);
 	else if (n < 2)
 		return (n);
-	return (isqrt(2, n, n));
+	return (isqrt(2, n));
 }
