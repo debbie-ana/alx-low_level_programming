@@ -9,7 +9,7 @@ int isqrt(int a, int b)
 {
 	if (a * a == b)
 	{
-		return (b);
+		return (a);
 	}
 	else if (a * a > b)
 	{
