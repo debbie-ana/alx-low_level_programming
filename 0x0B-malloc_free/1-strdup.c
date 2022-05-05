@@ -29,7 +29,7 @@ int _strlen(char *s)
 
 char *_strdup(char *str)
 {
-	if (str == NULL || a == NULL)
+	if (str == NULL)
 		return (NULL);
 	int len = _strlen(str);
 	char *a = malloc((len + 1) * sizeof(char));
