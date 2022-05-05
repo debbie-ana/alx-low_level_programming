@@ -29,12 +29,12 @@ int _strlen(char *s)
 
 char *_strdup(char *str)
 {
-	if (str == NULL || a == NULL)
-		return (NULL);
 	int len = _strlen(str);
 	char *a = malloc((len + 1) * sizeof(char));
 	int i;
 
+	if (str == NULL || a == NULL)
+		return (NULL);
 	for (i = 0; i < len; i++)
 		a[i] = str[i];
 	a[i] = '\0';
