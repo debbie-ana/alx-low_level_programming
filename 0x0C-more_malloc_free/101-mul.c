@@ -133,6 +133,7 @@ int main(int argc, char *argv[])
 	{
 		for (ti = 0; e[ti]; ti++)
 			_putchar(e[ti]);
+		free(a);
 		exit(98);
 	}
 	init(a, ln - 1);
@@ -148,6 +149,5 @@ int main(int argc, char *argv[])
 		}
 	}
 	_print(a, ln - 1);
-	free(t);
 	return (0);
 }
