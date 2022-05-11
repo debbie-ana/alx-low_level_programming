@@ -8,6 +8,8 @@
 
 int main()
 {
+#ifdef __FILE__
 	printf("%s\n", __FILE__);
+#endif
 	return (0);
 }
