@@ -6,10 +6,8 @@
  * Return: int
  */
 
-int main()
+int main(void)
 {
-#ifdef __FILE__
 	printf("%s\n", __FILE__);
-#endif
 	return (0);
 }
