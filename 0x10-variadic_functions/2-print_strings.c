@@ -3,13 +3,12 @@
 #include <stdarg.h>
 
 /**
- * print_string - prints strings followed by a newline
+ * print_strings - prints strings followed by a newline
  * @separator: string to be printed between the strings
  * @n: count of strings to be printed
  *
  * Return: void
  */
-
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
