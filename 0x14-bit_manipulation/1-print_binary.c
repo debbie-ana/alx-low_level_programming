@@ -9,27 +9,7 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int a;
-	int i = 31, j;
-
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
-	a = 1 << i;
-	while (n < a)
-	{
-		i--;
-		a = 1 << i;
-	}
-	/*(1 << i is equivalent to 2 raised to power i*/
-	for (; i >= 0; i--)
-	{
-		j = n >> i;
-		if (j & 1)
-			_putchar('1');
-		else
-			_putchar('0');
-	}
+	if (n > 1)
+		print_binary(n >> 1);
+	_putchar((n & 1) + '0');
 }
