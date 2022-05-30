@@ -10,8 +10,7 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int a;
-	long int i = 31;
-	int j;
+	int i = 31, j;
 
 	if (n == 0)
 	{
