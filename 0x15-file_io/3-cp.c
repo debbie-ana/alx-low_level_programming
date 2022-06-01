@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 		}
 		rd = read(op1, buf, 1024);
 		op2 = open(argv[2], O_WRONLY | O_APPEND);
-	} while (rd > 0);
+	} while (rd == 1024);
 
 	close_file(op1);
 	close_file(op2);
