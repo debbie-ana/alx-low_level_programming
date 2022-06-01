@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	op1 = open(argv[1], O_RDONLY);
-	op2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	op2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	rd = read(op1, buf, 1024);
 	do {
 		if (op1 < 0 || rd < 0)
@@ -55,8 +55,7 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 		rd = read(op1, buf, 1024);
-		op2 = open(argv[2], O_WRONLY | O_APPEND);
-	} while (rd == 1024);
+	} while (rd > 0);
 
 	close_file(op1);
 	close_file(op2);
