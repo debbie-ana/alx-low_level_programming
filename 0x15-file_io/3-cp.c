@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 		if (op2 < 0 || wr < 0)
 		{
 			dprintf(STDERR_FILENO,
-					"Error: Can't write to %s\n", argv[2]);
+				"Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 		rd = read(op1, buf, 1024);
